@@ -1,0 +1,178 @@
+name: regulation-intel-mcp
+version: 1.0.0
+description: "Live global AI regulation intelligence. Query any jurisdiction's AI legal status, find regulatory arbitrage gaps, track new legislation. Updated weekly."
+
+author: SysAdmin
+license: MIT
+repository: https://github.com/your-org/regulation-intel-mcp
+
+# MCP Server Configuration
+server:
+  port: 3423
+  host: "0.0.0.0"
+  protocol: "http"
+
+# Tools exposed
+tools:
+  - name: get_jurisdiction_status
+    description: "Get current AI legal status for a specific jurisdiction and topic"
+    input_schema:
+      type: object
+      properties:
+        jurisdiction:
+          type: string
+          description: "Jurisdiction code (e.g., EU, US-Federal, UK, UAE, Singapore)"
+        topic:
+          type: string
+          description: "Topic to query (e.g., facial recognition, generative ai, bias audit)"
+      required:
+        - jurisdiction
+        - topic
+
+  - name: list_regulations
+    description: "List all AI regulations for a given country/region"
+    input_schema:
+      type: object
+      properties:
+        jurisdiction:
+          type: string
+          description: "Jurisdiction code (e.g., EU, US-California, China)"
+      required:
+        - jurisdiction
+
+  - name: get_arbitrage_gaps
+    description: "Identify regulatory arbitrage opportunities across jurisdictions"
+    input_schema:
+      type: object
+      properties: {}
+
+  - name: search_regulations
+    description: "Full-text search across all jurisdictions and regulations"
+    input_schema:
+      type: object
+      properties:
+        query:
+          type: string
+          description: "Search query (e.g., facial recognition, transparency, bias audit)"
+      required:
+        - query
+
+  - name: get_recent_changes
+    description: "Get regulations that changed/enforced in the last N days"
+    input_schema:
+      type: object
+      properties:
+        days:
+          type: integer
+          description: "Number of days to look back (e.g., 7, 30, 365)"
+      required:
+        - days
+
+# Data sources
+data_sources:
+  - name: "EU AI Act Portal"
+    url: "https://artificialintelligenceact.eu/"
+    update_frequency: "weekly"
+    status: "active"
+
+  - name: "Congress.gov API"
+    url: "https://congress.gov/api/"
+    update_frequency: "weekly"
+    status: "active"
+
+  - name: "NCSL AI Legislation Tracker"
+    url: "https://ncsl.org/research/telecommunications..."
+    update_frequency: "quarterly"
+    status: "active"
+
+  - name: "Official Government Sources"
+    update_frequency: "as_available"
+    jurisdictions:
+      - China (MIIT, CAC)
+      - UK (AI Safety Institute)
+      - Singapore (Model AI Governance Framework)
+      - UAE (tech strategy)
+
+# Security Configuration
+security:
+  authentication: "optional"
+  api_key_required: false
+  rate_limit:
+    free_tier:
+      requests_per_minute: 10
+      per_ip: true
+    premium_tier:
+      api_key_required: true
+      requests_per_minute: 1000
+  data_collection: "no_user_data"
+  data_retention: "regulations_only"
+  audit:
+    enabled: true
+    required_before_publish: "cosmos"
+
+# Operations
+operations:
+  crawler:
+    enabled: true
+    schedule: "0 0 * * 0"  # Weekly Sunday 00:00 UTC
+    file: "crawler.js"
+  
+  health_check:
+    endpoint: "/health"
+    interval_seconds: 300
+    required: true
+
+  logging:
+    level: "info"
+    changelog: "logs/changelog.jsonl"
+    max_file_size_mb: 100
+    retention_days: 365
+
+# Deployment
+deployment:
+  docker_support: false
+  node_version: ">=18.0.0"
+  dependencies:
+    - express: "^4.18.2"
+  startup_command: "npm start"
+  env_variables:
+    - PORT: "3423 (default)"
+
+# Metadata
+metadata:
+  use_case:
+    - "AI compliance tracking"
+    - "Regulatory arbitrage detection"
+    - "Jurisdiction shopping analysis"
+    - "Legal risk assessment"
+  
+  target_users:
+    - "AI startups"
+    - "Compliance lawyers"
+    - "Regulatory consultants"
+    - "Venture capital firms"
+  
+  integrations:
+    - type: "B2B SaaS"
+      model: "API + webhook"
+    - type: "Slack/Discord"
+      model: "Bot commands"
+  
+  market_opportunity:
+    size: "$50B+ (compliance market for AI startups)"
+    target_capture: "0.1% = $50M ARR"
+    first_mover_advantage: "high"
+    competitive_moat: "network_effect + data_aggregation"
+
+# Update log
+changelog:
+  - version: "1.0.0"
+    date: "2026-03-03"
+    status: "Pioneer release"
+    features:
+      - "5 core tools implemented"
+      - "12 jurisdictions seeded"
+      - "Rate limiting (free tier)"
+      - "Crawler framework"
+      - "MCP protocol endpoints"
+    notes: "First comprehensive global AI regulation tracker"

@@ -1,0 +1,281 @@
+{
+  "jurisdictions": [
+    {
+      "id": "EU",
+      "name": "European Union",
+      "jurisdiction_type": "regional",
+      "arbitrage_score": 0.15,
+      "last_update": "2026-03-03",
+      "regulations": [
+        {
+          "id": "eu_ai_act_2023",
+          "name": "EU AI Act",
+          "adoption_date": "2023-06-14",
+          "enforcement_date": "2025-02-02",
+          "enforcement_note": "Prohibited practices active Feb 2, 2025. Transparency obligations (Articles 13-14) active Feb 2026. High-risk system mandatory requirements active Aug 2026. GPAI model obligations active Aug 2025.",
+          "enforcement_status": "active",
+          "status_as_of": "2026-03-03",
+          "description": "Comprehensive AI regulation with risk-based approach",
+          "enforcement_body": "European Commission & AI Office",
+          "articles": [
+            {
+              "number": 5,
+              "title": "Prohibited Uses",
+              "scope": ["facial_recognition", "social_scoring", "manipulative_influence"],
+              "penalty": "€30M or 6% global revenue",
+              "enforcement_stage": "active"
+            },
+            {
+              "number": "6-29",
+              "title": "High-Risk Systems",
+              "scope": ["biometric_identification", "law_enforcement", "employment", "education", "critical_infrastructure", "public_services"],
+              "penalty": "€30M or 6% global revenue",
+              "enforcement_stage": "mandatory_from_sept_2026"
+            },
+            {
+              "number": "13-14",
+              "title": "Transparency & General-Purpose AI",
+              "scope": ["training_data_disclosure", "copyright_compliance", "energy_use_disclosure"],
+              "penalty": "€30M or 6% global revenue",
+              "enforcement_stage": "active_feb_2026"
+            }
+          ],
+          "compliance_difficulty": "high",
+          "estimated_compliance_cost_usd": 50000000
+        }
+      ]
+    },
+    {
+      "id": "US-Federal",
+      "name": "United States (Federal)",
+      "jurisdiction_type": "national",
+      "arbitrage_score": 0.65,
+      "last_update": "2026-03-03",
+      "regulations": [
+        {
+          "id": "us_executive_order_14110",
+          "name": "Executive Order 14110 (Biden)",
+          "adoption_date": "2023-10-30",
+          "enforcement_date": "2023-10-30",
+          "enforcement_status": "active",
+          "status_as_of": "2026-03-03",
+          "description": "Federal AI policy framework; NIST AI RMF advisory",
+          "enforcement_body": "NIST, OMB (advisory, non-binding)",
+          "scope": ["federal_ai_procurement", "risk_management"],
+          "compliance_difficulty": "low",
+          "estimated_compliance_cost_usd": 1000000
+        },
+        {
+          "id": "us_ftc_ai_enforcement",
+          "name": "FTC AI Enforcement (Section 5 FTC Act)",
+          "adoption_date": "2024-01-01",
+          "enforcement_date": "2024-01-01",
+          "enforcement_status": "active",
+          "status_as_of": "2026-03-03",
+          "description": "De facto regulation via FTC enforcement against deceptive AI practices",
+          "enforcement_body": "Federal Trade Commission",
+          "scope": ["deceptive_ai_practices", "consumer_protection"],
+          "compliance_difficulty": "medium",
+          "estimated_compliance_cost_usd": 5000000,
+          "recent_actions": ["ChatGPT investigation 2024-2025", "Anthropic monitoring"]
+        }
+      ],
+      "pending_legislation": [
+        {
+          "name": "AI Bill of Rights",
+          "status": "stalled",
+          "years_pending": 4
+        },
+        {
+          "name": "Algorithmic Accountability Act",
+          "status": "slow_progress",
+          "bipartisan": true
+        }
+      ]
+    },
+    {
+      "id": "US-California",
+      "name": "United States (California)",
+      "jurisdiction_type": "state",
+      "arbitrage_score": 0.60,
+      "last_update": "2026-03-03",
+      "regulations": [
+        {
+          "id": "us_ca_cpra",
+          "name": "California Privacy Rights Act (CPRA)",
+          "adoption_date": "2020-11-03",
+          "enforcement_date": "2023-01-01",
+          "enforcement_status": "active",
+          "status_as_of": "2026-03-03",
+          "description": "Data-centric privacy law; tangentially applies to AI",
+          "enforcement_body": "California Attorney General",
+          "compliance_difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": "US-NewYork",
+      "name": "United States (New York)",
+      "jurisdiction_type": "state",
+      "arbitrage_score": 0.55,
+      "last_update": "2026-03-03",
+      "regulations": [
+        {
+          "id": "us_ny_bias_audit",
+          "name": "NYC AI Bias Audit Law",
+          "adoption_date": "2024-01-01",
+          "enforcement_date": "2024-01-01",
+          "enforcement_status": "active",
+          "status_as_of": "2026-03-03",
+          "description": "Mandatory algorithmic bias testing in employment AI",
+          "enforcement_body": "NYC Human Rights Commission",
+          "compliance_difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": "US-Texas",
+      "name": "United States (Texas)",
+      "jurisdiction_type": "state",
+      "arbitrage_score": 0.80,
+      "last_update": "2026-03-03",
+      "regulations": [],
+      "description": "No AI-specific regulation; startup-friendly environment",
+      "enforcement_status": "none"
+    },
+    {
+      "id": "China",
+      "name": "People's Republic of China",
+      "jurisdiction_type": "national",
+      "arbitrage_score": 0.20,
+      "last_update": "2026-03-03",
+      "regulations": [
+        {
+          "id": "china_generative_ai_interim_rules_2023",
+          "name": "Generative AI Interim Rules",
+          "adoption_date": "2023-08-15",
+          "enforcement_date": "2023-08-15",
+          "enforcement_status": "active",
+          "status_as_of": "2026-03-03",
+          "description": "Rules for generative AI services (ChatGPT-like models)",
+          "enforcement_body": "Ministry of Industry & Information Technology (MIIT), Cyberspace Administration of China (CAC)",
+          "penalty": "Service shutdown, 100k-5M RMB fines",
+          "compliance_difficulty": "high"
+        }
+      ],
+      "regulatory_trend": "increasing"
+    },
+    {
+      "id": "UK",
+      "name": "United Kingdom",
+      "jurisdiction_type": "national",
+      "arbitrage_score": 0.70,
+      "last_update": "2026-03-03",
+      "regulations": [
+        {
+          "id": "uk_ai_safety_institute",
+          "name": "AI Safety Institute Framework",
+          "adoption_date": "2024-01-15",
+          "enforcement_status": "active_advisory",
+          "status_as_of": "2026-03-03",
+          "description": "Principles-based AI guidance; research + advisory (not prescriptive)",
+          "enforcement_body": "AI Safety Institute",
+          "compliance_difficulty": "low"
+        }
+      ]
+    },
+    {
+      "id": "Singapore",
+      "name": "Singapore",
+      "jurisdiction_type": "national",
+      "arbitrage_score": 0.85,
+      "last_update": "2026-03-03",
+      "regulations": [
+        {
+          "id": "singapore_model_ai_governance",
+          "name": "Model AI Governance Framework",
+          "adoption_date": "2019-11-20",
+          "enforcement_status": "voluntary_advisory",
+          "status_as_of": "2026-03-03",
+          "description": "Principles-based, non-binding framework for AI governance",
+          "enforcement_body": "None (voluntary)",
+          "compliance_difficulty": "very_low"
+        }
+      ]
+    },
+    {
+      "id": "UAE",
+      "name": "United Arab Emirates",
+      "jurisdiction_type": "national",
+      "arbitrage_score": 0.95,
+      "last_update": "2026-03-03",
+      "regulations": [],
+      "enforcement_status": "none",
+      "description": "No AI-specific law; tech-friendly, minimal regulation"
+    },
+    {
+      "id": "Brazil",
+      "name": "Brazil",
+      "jurisdiction_type": "national",
+      "arbitrage_score": 0.65,
+      "last_update": "2026-03-03",
+      "regulations": [],
+      "enforcement_status": "none"
+    },
+    {
+      "id": "Canada",
+      "name": "Canada",
+      "jurisdiction_type": "national",
+      "arbitrage_score": 0.60,
+      "last_update": "2026-03-03",
+      "regulations": [],
+      "enforcement_status": "none"
+    },
+    {
+      "id": "India",
+      "name": "India",
+      "jurisdiction_type": "national",
+      "arbitrage_score": 0.85,
+      "last_update": "2026-03-03",
+      "regulations": [],
+      "enforcement_status": "none"
+    }
+  ],
+  "arbitrage_gaps": [
+    {
+      "jurisdiction_light": "UAE",
+      "jurisdiction_heavy": "EU",
+      "gap_summary": "No regulation vs. €30M fines + 6% revenue penalties",
+      "arbitrage_opportunity": "Incorporate in UAE, operate globally, avoid EU compliance",
+      "timeline": "2026-2027",
+      "risk_level": "high"
+    },
+    {
+      "jurisdiction_light": "Singapore",
+      "jurisdiction_heavy": "EU",
+      "gap_summary": "Voluntary framework vs. mandatory enforcement",
+      "arbitrage_opportunity": "Singapore-based AI with light compliance",
+      "timeline": "ongoing",
+      "risk_level": "medium"
+    },
+    {
+      "jurisdiction_light": "Texas",
+      "jurisdiction_heavy": "California",
+      "gap_summary": "No state AI regulation vs. bias audits",
+      "arbitrage_opportunity": "Texas incorporation for US market",
+      "timeline": "2026+",
+      "risk_level": "low"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "data_freshness": "2026-03-03",
+    "sources": [
+      "EU AI Act portal",
+      "Congress.gov API",
+      "NCSL tracker",
+      "Official government sources"
+    ],
+    "next_update": "2026-03-10"
+  }
+}

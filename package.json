@@ -1,0 +1,32 @@
+{
+  "name": "regulation-intel-mcp",
+  "version": "1.0.0",
+  "description": "Live global AI regulation intelligence. Query any jurisdiction's AI legal status, find regulatory arbitrage gaps, track new legislation.",
+  "main": "regulation-intel-server.js",
+  "bin": {
+    "regulation-intel": "regulation-intel-server.js"
+  },
+  "scripts": {
+    "start": "node regulation-intel-server.js",
+    "dev": "PORT=3423 node regulation-intel-server.js",
+    "crawl": "node crawler.js",
+    "test": "echo 'Tests not configured yet' && exit 0"
+  },
+  "keywords": [
+    "ai",
+    "regulation",
+    "compliance",
+    "jurisdiction",
+    "legal",
+    "arbitrage",
+    "mcp"
+  ],
+  "author": "SysAdmin",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
